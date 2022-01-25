@@ -1,0 +1,8 @@
+-- CREATE SCHEMA `memes` ;
+
+DROP TABLE IF EXISTS `memes`;
+
+CREATE TABLE `memes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `url` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`id`));
