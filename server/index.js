@@ -24,6 +24,16 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/num', (req, res) => {
+  db.query('SELECT * FROM num', (err, result) => {
+    if (err) {
+      res.end(err);
+    } else {
+      res.json(result);
+    }
+  });
+});
+
 app.listen(Port, () => {
   console.log(`Server Running on port: ${Port}`);
 });
