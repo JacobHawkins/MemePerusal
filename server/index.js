@@ -34,6 +34,48 @@ app.get('/num', (req, res) => {
   });
 });
 
+app.post('/new', (req, res) => {
+  // console.log('hello', req.query.new);
+  db.query(
+    `INSERT INTO memes(url, name, fav) VALUES("${req.query.new}", "Cute Puppy, Cat, or Pikachu", false);`,
+    (err, result) => {
+      if (err) {
+        res.end(err);
+      } else {
+        res.end('sucess!');
+      }
+    }
+  );
+
+  app.post('/select', (req, res) => {
+    db.query(
+      `UPDATE num SET num = ${req.query.select} where id=1;`,
+      (err, result) => {
+        if (err) {
+          res.end(err);
+        } else {
+          res.end('Success!');
+        }
+      }
+    );
+  });
+
+  app.post('/delete', (req, res) => {
+    db.query(
+      `DELETE FROM memes WHERE id = ${req.query.delete};`,
+      (err, result) => {
+        if (err) {
+          res.end(err);
+        } else {
+          res.end('Success!');
+        }
+      }
+    );
+  });
+
+  res.end('Added Meme to DB!');
+});
+
 app.listen(Port, () => {
   console.log(`Server Running on port: ${Port}`);
 });
