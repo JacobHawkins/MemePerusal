@@ -143,12 +143,18 @@ const App = function () {
     >
       <div className='App'>
         <div className='Carousel'>
-          <button onClick={handleClickPrev}>Previous</button>
+          <button onClick={handleClickPrev} className='previous'>
+            &laquo; Previous
+          </button>
           <Photo />
-          <button onClick={handleClickNext}>Next</button>
+          <button onClick={handleClickNext} className='next'>
+            Next &raquo;
+          </button>
         </div>
         <CD newUrl={newUrl} setNewUrl={setNewUrl} handle={handleClickAdd} />
-        <button onClick={handleClickDelete}>Delete</button>
+        <button onClick={handleClickDelete} className='delete'>
+          Delete
+        </button>
       </div>
     </AppContext.Provider>
   );

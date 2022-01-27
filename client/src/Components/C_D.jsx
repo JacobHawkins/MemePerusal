@@ -6,6 +6,7 @@ const CD = function (props) {
       <form>
         <input
           type={'text'}
+          defaultValue={'URL Link'}
           onChange={(e) => {
             e.preventDefault();
             props.setNewUrl(e.target.value);

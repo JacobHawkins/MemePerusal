@@ -19,3 +19,38 @@ html {
   display: flex;
   justify-content: center;
 }
+
+button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #00faa7;
+  color: black;
+}
+
+.next {
+  background-color: #004edf;
+  color: white;
+}
+
+.delete {
+  background-color: #df0000;
+  color: white;
+}
+
+button {
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
